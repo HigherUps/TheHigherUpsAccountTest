@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In -- TheHigherUps Accounts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="accountBody">
+        <h1 class="accountHeading">TheHigherUps</h1>
+        <p class="accountTitle">Sign In</p>
+        <p class="accountSubTitle">Sign Into TheHigherUps</p>
+        <form class="accountForm loginForm">
+            <label for="loginEmail" class="accountLabel">Enter Email:</label><br>
+            <input type="email" name="loginEmail" id="loginEmail" class="accountInput" placeholder="Enter Email Address">
+            <label for="loginPassword" class="accountLabel">Enter Password: </label><br>
+            <input type="password" name="loginPassword" id="loginPassword" class="accountInput" placeholder="Enter Password">
+            <button type="submit" class="accountButton loginButton">Login</button>
+            <p class="errorText"></p>
+            <a href="password-reset.html" class="bottomText loginLink link">Forgot Password?</a>
+            <a href="/create-account.html" class="bottomText loginLink link">Create Account</a>
+        </form>
+    </div>
+</body>
+<script>
+    const login = document.querySelector('.loginForm')
+    const loginEmail = document.querySelector('#loginEmail')
+    const loginPass = document.querySelector('#loginPassword')
+    const err = document.querySelector('.errorText')
+    login.addEventListener('submit', (e) => {
+        e.preventDefault()
+        err.innerText = 'Account Login Not Implemented Yet!'
+        setTimeout(() => {
+            err.innerText = ''
+        }, 3000)
+    })
+</script>
+</html>
