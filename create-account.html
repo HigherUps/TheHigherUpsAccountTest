@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account -- TheHigherUps Accounts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="accountBody createBody">
+        <h1 class="accountHeading">TheHigherUps</h1>
+        <p class="accountTitle">Create Account</p>
+        <p class="accountSubTitle">Create an Account With TheHigherUps</p>
+        <form class="accountForm createForm">
+            <label for="accountName" class="accountLabel">Enter Name: </label><br>
+            <input type="text" name="accountName" id="accountName" class="accountInput">
+            <label for="createEmail" class="accountLabel">Enter Email: </label>
+            <input type="email" name="createEmail" id="createEmail" class="accountInput">
+            <label for="createPassword" class="accountLabel">Create Password: </label>
+            <input type="password" name="createPassword" id="createPassword" class="accountInput">
+            <label for="createPasswordVerify" class="accountLabel">Confirm Password: </label>
+            <input type="password" name="createPasswordVerify" id="createPasswordVerify" class="accountInput">
+            <button type="submit" class="accountButton createButton">Create Account</button>
+            <p class="errorText"></p>
+            <p class="bottomText createLink">Have an Account? <a href="/" class="bottomText createLink link">Sign In Instead</a></p>
+        </form>
+    </div>
+</body>
+<script>
+    const createAccount = document.querySelector('.createForm')
+    const err = document.querySelector('.errorText')
+    createAccount.addEventListener('submit', (e) => {
+        e.preventDefault()
+        err.innerText = 'Account Creating Not Implemented Yet!'
+        setTimeout(() => {
+            err.innerText = ''
+        }, 3000)
+    })
+</script>
+</html>

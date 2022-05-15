@@ -1,1 +1,178 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');* {padding: 0;margin: 0;font-family: 'Roboto', sans-serif;font-weight: 400;}:root {--color-white: #fff;--color-gray: hsl(0, 0%, 50%);--color-main-blue: hsl(210, 100%, 50%);--color-error: hsl(0, 100%, 60%);}.accountHeading {padding: 1em;}.accountBody {display: -webkit-box;display: -ms-flexbox;display: flex;position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;align-items: center;margin-inline: auto;width: 500px;height: 650px;border: 1px solid hsl(0, 0%, 50%);border-radius: 15px;}.accountForm {width: 90%;margin-top: 20px;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}.accountLabel {font-size: 20px;-ms-flex-item-align: start;align-self: flex-start;}.accountTitle {font-size: 25px;font-weight: 500;}.accountSubTitle {padding: 1em;font-size: 20px;}.accountInput {width: 100%;margin: 15px;border: 1px solid hsl(0, 0%, 50%);border-radius: 8px;font-size: 25px;padding: 0.25em;}.accountInput:focus {outline: 2px solid var(--color-main-blue);}.accountButton {-ms-flex-item-align: end;align-self: flex-end;font-size: 25px;padding-inline: 25px;padding-block: 5px;}.accountButton:hover {cursor: pointer;-webkit-box-shadow: 0px 0px 5px hsl(0, 0%, 50%);box-shadow: 0px 0px 5px hsl(0, 0%, 50%);}.loginButton {background-color: hsl(206, 55%, 39%);color: white;border: 1px solid hsl(0, 0%, 50%);border-radius: 5px;}.bottomText {margin-top: 25px;color: var(--color-gray);font-size: 18px;}.loginLink {-ms-flex-item-align: start;align-self: flex-start;}.link {color: var(--color-main-blue);padding: 8px;border-radius: 5px;}.link:hover {background-color: hsla(0, 0%, 50%, 0.12);-webkit-transition: background-color 150ms ease-in-out;-o-transition: background-color 150ms ease-in-out;transition: background-color 150ms ease-in-out;}.errorText {margin-top: 0.5em;text-align: center;display: block;height: 15px;font-size: 18px;color: var(--color-error);}@media screen and (max-width: 600px) {.accountBody {width: 100%;border: none;position: relative;top: 0;left: 0;-webkit-transform: none;-ms-transform: none;transform: none;}}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+:root {
+    --color-white: #fff;
+    --color-gray: hsl(0, 0%, 50%);
+    --color-main-blue: hsl(210, 100%, 50%);
+    --color-error: hsl(0, 100%, 60%);
+}
+.accountHeading {
+    padding: 1em;
+}
+.accountBody {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-orient: vertical;
+
+    -webkit-box-direction: normal;
+
+        -ms-flex-direction: column;
+
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-inline: auto;
+    width: 500px;
+    height: 650px;
+    border: 1px solid hsl(0, 0%, 50%);
+    border-radius: 15px;
+}
+.loginBody,
+.createBody,
+.resetPasswordBody {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+.accountForm {
+    width: 90%;
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.accountLabel {
+    font-size: 20px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+}
+.accountTitle {
+    font-size: 25px;
+    font-weight: 500;
+}
+.accountSubTitle {
+    padding: 1em;
+    font-size: 20px;
+}
+.accountInput {
+    width: 100%;
+    margin: 15px;
+    border: 1px solid hsl(0, 0%, 50%);
+    border-radius: 8px;
+    font-size: 25px;
+    padding: 0.25em;
+}
+.accountInput:focus,
+.accountInputShort:focus {
+    outline: 2px solid var(--color-main-blue);
+}
+.accountName {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+.createBody {
+    height: 750px;
+}
+.accountInputShort {
+    width: 40%;
+    margin: 15px;
+    border: 1px solid hsl(0, 0%, 50%);
+    border-radius: 8px;
+    font-size: 25px;
+    padding: 0.25em;
+}
+.accountButton {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    font-size: 25px;
+    padding-inline: 25px;
+    padding-block: 5px;
+}
+.accountButton:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 5px hsl(0, 0%, 50%);
+            box-shadow: 0px 0px 5px hsl(0, 0%, 50%);
+}
+.loginButton,
+.createButton,
+.resetPasswordButton {
+    background-color: hsl(206, 55%, 39%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.bottomText {
+    margin-top: 25px;
+    color: var(--color-gray);
+    font-size: 18px;
+}
+.loginLink,
+.createLink,
+.resetLink {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+}
+.link {
+    color: var(--color-main-blue);
+    padding: 8px;
+    border-radius: 5px;
+}
+.link:hover {
+    background-color: hsla(0, 0%, 50%, 0.12);
+    -webkit-transition: background-color 150ms ease-in-out;
+    -o-transition: background-color 150ms ease-in-out;
+    transition: background-color 150ms ease-in-out;
+}
+.errorText,
+.accountSubTitle,
+.accountTitle {
+    text-align: center;
+}
+.errorText {
+    margin-top: 0.5em;
+    display: block;
+    height: 15px;
+    font-size: 18px;
+    color: var(--color-error);
+}
+@media screen and (max-width: 600px) {
+    .accountBody {
+        width: 100%;
+        border: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
+    }
+}
